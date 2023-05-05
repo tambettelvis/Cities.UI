@@ -1,0 +1,53 @@
+:host {
+
+  .row-container {
+    display: grid;
+    grid-template-columns: 10% 50% 30% auto;
+    padding: 8px 0;
+    border-bottom: lightgray 1px solid;
+
+    > div {
+      padding-left: 4px;
+    }
+
+    .url {
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .image-container {
+      justify-self: end;
+
+      img {
+        max-height:100px;
+        max-width:100px;
+        height:auto;
+        width:auto;
+      }
+    }
+
+    .edit-icon-container {
+      justify-self: end;
+    }
+  }
+
+  .edit-container {
+    display: flex;
+    padding: 16px 0;
+    align-items: center;
+    border-bottom: lightgray 1px solid;
+
+    .text-field, button {
+      margin-left: 8px;
+    }
+
+
+    .text-field {
+      width: 30%;
+    }
+
+
+  }
+}

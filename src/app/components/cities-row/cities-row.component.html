@@ -1,0 +1,39 @@
+<div class="row-container" *ngIf="!editMode else editTemplate">
+
+  <div class="name">
+    {{ city?.getName() }}
+  </div>
+
+  <div class="url">
+    {{ city?.getUrl() }}
+  </div>
+
+  <div class="image-container">
+
+    <img [src]="city?.getUrl()">
+
+  </div>
+
+  <div class="edit-icon-container">
+    <mat-icon (click)="editMode = !editMode">edit</mat-icon>
+  </div>
+
+</div>
+
+<ng-template #editTemplate>
+  <div class="edit-container" [formGroup]="form">
+
+    <mat-form-field class="text-field">
+      <mat-label>City</mat-label>
+      <input type="text" matInput formControlName="name" placeholder="City">
+    </mat-form-field>
+
+    <mat-form-field class="text-field">
+      <mat-label>Url</mat-label>
+      <input type="text" matInput formControlName="url" placeholder="URL">
+    </mat-form-field>
+
+    <button (click)="submit()" mat-raised-button color="primary">Save</button>
+
+  </div>
+</ng-template>

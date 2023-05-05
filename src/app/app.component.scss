@@ -1,0 +1,29 @@
+:host {
+  .app-container {
+    padding: 16px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left-corner {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar {
+      display: flex;
+
+      div {
+        padding-right: 8px;
+      }
+    }
+  }
+
+  .table-container {
+    margin-top: 16px;
+  }
+
+}

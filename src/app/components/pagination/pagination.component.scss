@@ -1,0 +1,14 @@
+:host {
+  .pagination, .page-nums {
+    display: flex;
+    align-items: center;
+  }
+
+  mat-icon:hover {
+    cursor: pointer;
+  }
+
+  .selected {
+    font-weight: 500;
+  }
+}
